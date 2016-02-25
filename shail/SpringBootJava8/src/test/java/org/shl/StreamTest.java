@@ -24,4 +24,18 @@ public class StreamTest {
 		assertNotEquals(s1.getEmptyElementCount(data), 3);
 	}
 	
+	@Test
+	public void shouldReturnExactCountWhenStringMatchesToList(){
+		assertEquals(s1.getCountOfStringWithMatchesString(data, "Sh"),2);
+	}
+	
+	@Test
+	public void shouldReturnZeroWhenStringDoesnotMatchesToList(){
+		assertEquals(s1.getCountOfStringWithMatchesString(data, "Test"),0);
+	}
+	
+	@Test
+	public void shouldReturnConcatenatedNonEmptyString(){
+		assertEquals(s1.concatenateNonEmptyString(data),"Raja,Shailendra,Satish");
+	}
 }
